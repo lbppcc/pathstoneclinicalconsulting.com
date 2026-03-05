@@ -1011,7 +1011,7 @@
                 <p style="color: rgba(250, 248, 245, 0.8);"><strong style="color: var(--color-sage);">The how should be decided once.</strong> So your team can focus entirely on the who.</p>
             </div>
             <div style="flex-shrink: 0;">
-                <a href="https://calendar.app.google/KtdnsvwmChLuswEA6" class="btn btn-primary">Let's Talk Solutions</a>
+                <a href="#contact" class="btn btn-primary">Let's Talk Solutions</a>
             </div>
         </div>
     </section>
@@ -1213,8 +1213,8 @@
             <div class="footer-links">
                 <h4>Connect</h4>
                 <ul>
-                    <li><a href="https://calendar.app.google/KtdnsvwmChLuswEA6>Schedule a Call</a></li>
-                    <li><a href="mailto:laura@pathstoneclinical.com">Email Laura</a></li>
+                    <li><a href="#contact">Schedule a Call</a></li>
+                    <li><a href="#" onclick="document.getElementById('email-modal').style.display='flex'; return false;">Email Laura</a></li>
                     <li><a href="https://www.linkedin.com/in/lpoulter-healthtech/" target="_blank">LinkedIn</a></li>
                 </ul>
             </div>
@@ -1250,5 +1250,20 @@
             });
         });
     </script>
+
+    <!-- Email Modal -->
+    <div id="email-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none';">
+        <div style="background:#fff; border-radius:16px; padding:2.5rem; max-width:380px; width:90%; text-align:center; box-shadow:0 24px 64px rgba(0,0,0,0.2);">
+            <h3 style="font-family:Georgia,serif; font-size:1.3rem; color:#1a3440; margin:0 0 0.5rem;">Email Laura</h3>
+            <p style="color:#5a7a8a; font-size:0.9rem; margin:0 0 1.5rem;">laura@pathstoneclinical.com</p>
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+                <a href="https://mail.google.com/mail/?view=cm&to=laura@pathstoneclinical.com" target="_blank" onclick="document.getElementById('email-modal').style.display='none';" style="display:block; padding:0.85rem; background:#1a3440; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.95rem;">Open in Gmail</a>
+                <a href="https://outlook.live.com/mail/0/deeplink/compose?to=laura@pathstoneclinical.com" target="_blank" onclick="document.getElementById('email-modal').style.display='none';" style="display:block; padding:0.85rem; background:#1a3440; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.95rem;">Open in Outlook</a>
+                <a href="mailto:laura@pathstoneclinical.com" onclick="document.getElementById('email-modal').style.display='none';" style="display:block; padding:0.85rem; background:#1a3440; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.95rem;">Open in Default Mail App</a>
+                <button onclick="navigator.clipboard.writeText('laura@pathstoneclinical.com'); this.textContent='✓ Copied!'; setTimeout(()=>this.textContent='Copy Email Address',2000);" style="padding:0.85rem; background:#f0f5f2; color:#1a3440; border:none; border-radius:8px; font-weight:600; font-size:0.95rem; cursor:pointer;">Copy Email Address</button>
+            </div>
+            <button onclick="document.getElementById('email-modal').style.display='none';" style="margin-top:1.25rem; background:none; border:none; color:#9aada8; font-size:0.85rem; cursor:pointer;">Close</button>
+        </div>
+    </div>
 </body>
 </html>
